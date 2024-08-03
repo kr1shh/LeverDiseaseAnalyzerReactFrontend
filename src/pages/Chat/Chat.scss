@@ -1,0 +1,119 @@
+.chat_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins";
+    flex-direction: column;
+
+    .title{
+        padding: 150px 0;
+        color: #003459;
+        font-size: 20px;
+        font-style: italic;
+        h3{
+            font-weight: 400;
+
+            span{
+                font-weight: 800;
+            }
+        }
+    }
+
+    .chat_sec{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        .input_container{
+            position: fixed;
+            bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+    
+    
+            input{
+                height: 33px;
+                width: 800px;
+                position: relative;
+                padding: 20px 30px;
+                border-radius: 90px;
+                border: none;
+                background-color: white;
+                filter: drop-shadow(2px 3px 10px #61616180);
+                font-family: "Poppins";
+                color: #003459;
+    
+                &::placeholder{
+                    font-family: "Poppins";
+                    color: #003459;
+                }
+
+
+                &:focus{
+                    outline: none;
+                }
+            }
+    
+            button{
+                position: absolute;
+                padding: 20px 40px;
+                border-radius: 90px;
+                right: 10px;
+                border: none;
+                background-color: #003459;
+                cursor: pointer;
+                
+            }
+        }
+    }
+
+
+
+    .chat_hist{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 800px;
+        margin-bottom: 130px;
+
+        .bubble{
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
+
+        .chat_AI{
+            width: 100%;
+            display: flex;
+            justify-content: start;
+
+            .bubble{
+                background-color: white;
+                filter: drop-shadow(2px 3px 10px #61616140);
+                padding: 20px;
+                border-radius: 20px 20px 20px 0px;
+                color: #003459;
+                font-style: italic;
+            }
+        }
+
+        .chat_user{
+            width: 100%;
+            display: flex;
+            justify-content: end;
+
+            .bubble{
+                background-color: #003459;
+                border-radius: 20px 20px 0px 20px;
+                color: white;
+                filter: drop-shadow(2px 3px 10px #61616140);
+                padding: 20px;
+            }
+        }
+    }
+}
