@@ -90,22 +90,7 @@ const Chat = () => {
               )
             )}
 
-            {/* <div className="chat_AI">
-              <div className="bubble">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Labore, ab?
-                </p>
-              </div>
-            </div>
 
-            {message.map((item, index) => (
-              <div className="chat_user" key={index}>
-                <div className="bubble">
-                  <p>{item.user}</p>
-                </div>
-              </div>
-            ))} */}
           </div>
 
           <div className="input_container">
