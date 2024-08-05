@@ -81,13 +81,13 @@
         justify-content: center;
         width: 800px;
         margin-bottom: 130px;
-        // height: 500px;
-        // overflow-y: auto;
-        // scroll-behavior: smooth;
+        height: 500px;
+        overflow-y: auto;
+        scroll-behavior: smooth;
 
-        // &::-webkit-scrollbar{
-        //     display: none;
-        // }
+        &::-webkit-scrollbar{
+            display: none;
+        }
 
         .bubble{
             max-width: 600px;

@@ -7,7 +7,8 @@ import axios from "axios";
 const Chat = () => {
   const [message, setMessage] = useState([]);
   const [chat, setChat] = useState("");
-  const url = "http://127.0.0.1:8000/";
+  // const url = "http://127.0.0.1:8000/";
+  const url = "https://liverdeseasanalyzerapi.onrender.com/"
 
   const aiCall = async (chat) => {
     try {
