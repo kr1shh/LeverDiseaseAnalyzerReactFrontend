@@ -18,11 +18,13 @@ const Prediction = () => {
     albumin: "",
     albumin_and_globulin_ratio: "",
   });
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState({
+    liver : "",
+    diabetes : ""
+  });
   const [loading, setLoading] = useState(false)
-  // const url = "http://127.0.0.1:8000/";
-  const url = "https://liverdeseasanalyzerapi.onrender.com/"
-
+  const url = "http://127.0.0.1:8000/";
+  // const url = "https://liverdeseasanalyzerapi.onrender.com/"
 
 
 
@@ -39,7 +41,10 @@ const Prediction = () => {
     setLoading(true)
     try {
       const response = await axios.post(`${url}predict/`, formData);
-      setResult(response.data.message);      
+      setResult({
+        liver : response.data.message,
+        diabetes : response.data.additional_message,
+      });      
     }
      catch (error) {
       console.error("Error submitting form:", error);
@@ -115,9 +120,20 @@ const Prediction = () => {
             style={{
               fontSize: "20px",
               fontWeight: "600",
-              marginBottom:"100px"
+              marginBottom:"6px",
+              textAlign:"center",
             }}
-          >{result}</p>
+          >{result.liver}</p><br></br>
+          <p
+                      style={{
+                        fontSize: "20px",
+                        fontWeight: "600",
+                        marginBottom:"100px",
+                        textAlign:"center",
+                        color:"#195681"
+                      }}>
+            {result.diabetes}
+          </p>
         </div>
       )}
     </>
