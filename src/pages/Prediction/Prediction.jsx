@@ -23,8 +23,8 @@ const Prediction = () => {
     diabetes : ""
   });
   const [loading, setLoading] = useState(false)
-  const url = "http://127.0.0.1:8000/";
-  // const url = "https://liverdeseasanalyzerapi.onrender.com/"
+  // const url = "http://127.0.0.1:8000/";
+  const url = "https://liverdeseasanalyzerapi.onrender.com/"
 
 
 
